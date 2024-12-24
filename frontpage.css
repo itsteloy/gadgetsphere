@@ -1,0 +1,325 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Jost', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+header{
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  background-color: rgb(0, 100, 0);
+}
+
+.mybtn{
+  width: 70px;
+  height: 35px;
+  border: none;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.mybtn:hover{
+  border: none;
+  background-color: #2bab0d;
+}
+.logo img{
+  max-width: 100px;
+  height: auto;
+}
+.navmenu{
+  display: flex;
+}
+.navmenu a{
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all .42s ease;
+}
+.navmenu a:hover{
+  background-color: #2bab0d;
+}
+.nav-icon{
+  display: flex;
+  align-items: center;
+}
+#menu-icon{
+  font-size: 35px;
+  color: white;
+  z-index: 10001;
+  cursor: pointer;
+}
+section{
+  padding: 5% 10%;
+}
+.main-home{
+  width: 100%;
+  height: 100vh;
+  background-image: url(top-view-white-office-female-workspace-with-laptop.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+.main-text h5{
+  font-size: 16px;
+  color: #2bab0d;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.main-text h1{
+  margin: 6px 0 10px;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 1.1;
+  text-transform: capitalize;
+  color: #2bab0d;
+}
+.main-text p{
+  color: #2bab0d;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.main-btn{
+  padding: 12px 25px;
+  text-transform: capitalize;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  border: 2px solid #2bab0d;
+  transition: all .42s ease;
+  background: transparent;
+  color: #2bab0d;
+  cursor: pointer;
+}
+.main-btn:hover{
+  background-color:  #2bab0d;
+  color: white;
+}
+.main-btn i{
+  vertical-align: middle;
+}
+header.sticky{
+  background-color: rgb(0, 100, 0);
+  padding: 20px 10%;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  height: 70px;
+}
+
+/*latest section*/
+
+
+/* CONTACT-SECTION */
+
+.contact{
+  background-color: #f3f4f6;
+}
+.contact-info{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px,auto));
+  gap: 3rem;
+}
+.contact-info h4{
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contact-info p{
+  color: #312e2e;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .42s ;
+}
+.contact-info p:hover{
+  color: #2bab0d;
+}
+.contact-info p a{
+  color: #312e2e;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .42s;
+}
+.contact-info p a:hover{
+  color: #2bab0d;
+  transform: scale(1.5);
+}
+.social-icon i{
+  color: black;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all .42s;
+}
+.social-icon i:hover{
+  color: #2bab0d;
+  transform: scale(1.4);
+}
+.end-text{
+  background-color: #edfff1;
+  text-align: center;
+  padding: 20px;
+}
+.end-text p{
+  color: black;
+  text-transform: capitalize;
+}
+
+/* Responsive css*/
+
+@media(max-width: 890px){
+  header{
+    padding: 20px 3%;
+    transition: .4s;
+  }
+}
+@media(max-width: 630px){
+  .main-text h1{
+    font-size: 50px;
+    transition: .4s;
+  }
+  .main-text p{
+    font-size: 18px;
+    transition: .4s;
+  }
+  .main-btn{
+    padding: 10px 20px;
+    transition: .4s;
+  }
+}
+@media(max-width: 750px){
+  .navmenu{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 50vh;
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px;
+    transition: .42s;
+  }
+  header .navmenu a {
+    color: black;
+  }
+  .navmenu a{
+    display: block;
+    margin: 10px 0;
+  }
+  .navmenu.open{
+    right: 0;
+  }
+}
+
+.my-custom-popup {
+  max-width: 100px;  
+  background: #f3f4f6;  
+  color: black;      
+}
+
+/*register form*/
+.register {
+  position: absolute;
+  top: 54%;
+  left: 80%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba(201, 190, 190, 0.922);
+  border-radius: 10px;
+  color: black;
+  
+}
+.register h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  color: black ;
+  text-align: center;
+}
+.register .user-box {
+  position: relative;
+}
+
+.register .user-box input {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.register .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 14px;
+  color: black;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.register .user-box input:focus ~ label,
+.register .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #2bab0d;
+  font-size: 12px;
+}
+
+.BTN button{
+   height: 40px;
+    width: 100%;
+    font-size: 1.2em;
+    margin-top: 10px;
+    background-color: #2bab0d;
+    border: none;
+    border-radius: 30px;
+    padding: 8px;
+    cursor: pointer;
+    color: white; 
+    transition: all .42s;
+    font-weight: 400;
+
+}
+button:hover{
+  background-color: #59db3c;
+  transform: scale(0.95);
+}
+
+#term{
+  font-size: 12px;
+}
